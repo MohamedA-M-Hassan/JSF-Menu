@@ -9,8 +9,11 @@
 	<f:loadBundle basename="resources.application" var="msgs" />
 	<title><h:outputText value="#{msgs.welcomeTitle}" /></title>
 </h:head>
+
 <h:body>
-	<h3>hala W Aalla hala ya #{user.name}! </h3>
-		<h4>mnor ya kbeer</h4>
+	<h:form>
+		 <p><h:commandButton value="SignUp" action="newuser?faces-redirect=true"/></p>
+		 <p><h:commandButton value="login" action="welcome"/></p>
+	</h:form>
 </h:body>
 </html>

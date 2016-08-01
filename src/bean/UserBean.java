@@ -76,7 +76,7 @@ public class UserBean implements Serializable {
 			session.getTransaction().commit();
 			session.close();
 			
-			return "welcome";
+			return "welcome?faces-redirect=true";
 			
 		}
 		else return null;
