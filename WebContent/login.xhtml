@@ -17,15 +17,15 @@
          <table>
             <tr>
                <td>UserName:</td>
-               <td><h:inputText value="#{user.userName}"/></td>
+               <td><h:inputText value="#{login.userName}"/></td>
             </tr>
             
             <tr>
                <td>Enter your Password:</td>
-               <td><h:inputSecret value="#{user.password}"/></td>
+               <td><h:inputText value="#{login.password}"/></td>
             </tr>
          </table>
-         <p><h:commandButton value="2ntlk" action="welcome"/></p>
+         <p><h:commandButton value="2ntlk" action="#{login.actionLogin}"/></p>
 	
 	</h:form>
 </h:body>

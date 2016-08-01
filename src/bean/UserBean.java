@@ -81,10 +81,6 @@ public class UserBean implements Serializable {
 		}
 		else return null;
 	}
-	public String retrieveUser(){
-		
-		return"hi";
-	}
 	/*public void deleteUser(User user)
 	{
 		
