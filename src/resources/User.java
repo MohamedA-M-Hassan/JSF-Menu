@@ -12,7 +12,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-@NamedQuery(name="User.byId",query="from User where id = ?")
+//@NamedQuery(name="User.byId",query="from User where id = ?")
 @Entity
 @Table (name= "MH_USER")//,uniqueConstraints=@UniqueConstraint (columnNames={"UserName"}))
 //@ManagedBean(name="user")

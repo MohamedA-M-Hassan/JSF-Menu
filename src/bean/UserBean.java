@@ -12,7 +12,7 @@ import org.hibernate.cfg.Configuration;
 
 import resources.User;
 
-@ManagedBean
+@ManagedBean(name= "user")
 @SessionScoped
 public class UserBean implements Serializable {
 
@@ -57,21 +57,31 @@ public class UserBean implements Serializable {
 	
 	
 	
-	/* HABAL
-	public void insertUser(String name, String pass)
-	{
+	
+	public String joinUs()
+	{	
+		if (password.equals(passwordCheck))
+		{	User user = new User();
+			user.setName(name);
+			user.setUserName(userName);
+			user.setPassword(password);
+			user.setPhone(phone);
 		
-		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-		Session session = sessionFactory.openSession();
-		session.beginTransaction();
-		User user = new User();
-		user.setName(name);
-		user.setPassword(pass);
-		session.save(user);
-		session.getTransaction().commit();
-		session.close();
+			SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+			Session session = sessionFactory.openSession();
+			session.beginTransaction();
+		
+			session.save(user);
+			
+			session.getTransaction().commit();
+			session.close();
+			
+			return "welcome";
+			
+		}
+		else return null;
 	}
-	public void deleteUser(User user)
+	/*public void deleteUser(User user)
 	{
 		
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
@@ -82,6 +92,6 @@ public class UserBean implements Serializable {
 		session.delete(user);
 		session.getTransaction().commit();
 		session.close();
-	} 
-*/
+	} */
+
 }
