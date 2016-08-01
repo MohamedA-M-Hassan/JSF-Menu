@@ -9,23 +9,7 @@
 	<f:loadBundle basename="resources.application" var="msgs" />
 	<title><h:outputText value="#{msgs.welcomeTitle}" /></title>
 </h:head>
-
 <h:body>
-	<h3>
-		<h:outputText value="#{msgs.welcomeHeading}" />
-	</h3>
-
-	<p>
-		<h:outputText value="#{msgs.welcomeMessage}" />
-	</p>
-
-	<br />
-	<h:form>
-		<h:inputText value="#{login.name}" />
-		<h:inputSecret value="#{login.pass}" />
-		
-		<h:commandButton action="welcome" value="Login" />
-	</h:form>
-
+	<h3>Hala W Aalla Halla ya,#{login.name} </h3>  
 </h:body>
 </html>
