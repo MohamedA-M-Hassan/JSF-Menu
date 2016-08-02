@@ -8,17 +8,20 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedNativeQuery;
+import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+@SuppressWarnings("serial")
 
-@NamedNativeQuery(name="User.byName",query="select * from MH_USER where UserName = ? ", resultClass=User.class)
+@NamedQuery( name = "User.byName", query = "from User where userName = ? and password =  ?" )
+
+//@NamedQuery(name="User_byName",query="from User")
+//@NamedNativeQuery(name="User.byName",query="select * from MH_USER where UserName = ? ", resultClass=User.class)
 @Entity
 @Table (name= "MH_USER")//,uniqueConstraints=@UniqueConstraint (columnNames={"UserName"}))
-//@ManagedBean(name="user")
-//@SessionScoped
 public class User implements Serializable{
 	@Id 
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_generator")

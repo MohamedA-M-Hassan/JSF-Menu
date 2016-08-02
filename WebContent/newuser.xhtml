@@ -17,26 +17,26 @@
          <table>
             <tr>
                <td>Name:</td>
-               <td><h:inputText value="#{user.name}"/></td>
+               <td><h:inputText value="#{signup.name}"/></td>
             </tr>
             <tr>
             	<td>choose your UserName:</td>
-            	<td><h:inputText value="#{user.userName}"/></td>
+            	<td><h:inputText value="#{signup.userName}"/></td>
             </tr>
             <tr>
                <td>your Phone Number</td>
-               <td><h:inputText value="#{user.phone}"/></td>
+               <td><h:inputText value="#{signup.phone}"/></td>
             </tr>
             <tr>
                <td>Create your Password:</td>
-               <td><h:inputSecret value="#{user.password}"/></td>
+               <td><h:inputSecret value="#{signup.password}"/></td>
             </tr>
             <tr>
                <td>Please, confirm ur Password:</td>
-               <td><h:inputSecret value="#{user.passwordCheck}"/></td>
+               <td><h:inputSecret value="#{signup.passwordCheck}"/></td>
             </tr>
          </table>
-         <p><h:commandButton value="JoinUs" action="#{user.joinUs}"/></p>
+         <p><h:commandButton value="JoinUs" action="#{signup.joinUs}"/></p>
 	
 	</h:form>
 </h:body>
