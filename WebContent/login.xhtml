@@ -8,7 +8,9 @@
 <h:head>
 	<f:loadBundle basename="resources.application" var="msgs" />
 	<title><h:outputText value="#{msgs.welcomeTitle}" /></title>
-</h:head>
+	<meta charset="utf-8"/>	
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	</h:head>
 
 <h:body>
 	<h:form>
@@ -16,16 +18,19 @@
 		<h3>WelcomeBack, 2d5ol brglk elymen ya kbeer w smy Allah</h3>   
          <table>
             <tr>
-               <td>UserName:</td>
-               <td><h:inputText value="#{login.userName}"/></td>
+               <td><h:outputText value="UserName: " style="color: blue;font-style:italic"/> </td>
+               <td><h:inputText value="#{login.userName}" dir="rtl" style="color: white;background: blue ;border: thin solid blue;font-family:Tangerine"/></td>
             </tr>
             
             <tr>
                <td>Enter your Password:</td>
-               <td><h:inputText value="#{login.password}"/></td>
+               <td><h:inputSecret value="#{login.password}" dir="ltr" style="border: thin solid blue"/></td>
             </tr>
+            <tr>
+            <h:outputLink value="signup.xhtml">don't have account yet!!</h:outputLink>
+         	</tr>
          </table>
-         <p><h:commandButton value="2ntlk" action="#{login.actionLogin}"/></p>
+         <p><h:commandButton value="2ntlk" class="btn btn-success" action="#{login.actionLogin}"/></p>
 	
 	</h:form>
 </h:body>
